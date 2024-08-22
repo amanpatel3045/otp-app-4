@@ -43,6 +43,8 @@ const App = () => {
     signInWithPhoneNumber(auth, formatPh, appVerifier)
       .then((confirmationResult) => {
         window.confirmationResult = confirmationResult;
+          console.log("YOUR OTP IS - ", window.confirmationResult);
+        console.log("CONFIRMATION RESULT IS - ", confirmationResult);
         setLoading(false);
         setShowOTP(true);
         toast.success("OTP sended successfully!");
